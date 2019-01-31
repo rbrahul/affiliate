@@ -62,7 +62,7 @@ func processQueue() {
 
 func main() {
 	c := cron.New()
-	c.AddFunc("@every 15m", func() {
+	c.AddFunc("@every 10m", func() {
 		db.SaveASINsIntoQueue()
 		processQueue()
 		fmt.Println("Successfully Synced")
